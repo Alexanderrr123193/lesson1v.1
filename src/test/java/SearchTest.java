@@ -12,7 +12,7 @@ public class SearchTest {
     void successfulSearchTest() {
         Configuration.pageLoadStrategy = "eager";
         open("https://www.google.com/");
-        $("[name=q]").setValue("selenide").pressEnter();
+        $("[name=q]").setValue("selenid").pressEnter();
         // Проверка наличия результатов поиска
         $("[id=search]").shouldBe(visible);
         $("[id=search]").shouldHave(text("https://ru.selenide.org"));
